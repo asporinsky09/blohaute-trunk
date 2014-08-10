@@ -1,0 +1,259 @@
+@import url("reset.css");
+
+@font-face {
+  font-family: 'Neutra Light';
+  src: url('../../fonts/NeutraDispLightAlt.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/NeutraDispLightAlt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/NeutraDispLightAlt.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/NeutraDispLightAlt.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/NeutraDispLightAlt.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Neutra Medium';
+  src: url('../../fonts/NeutraTextBookAlt.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/NeutraTextBookAlt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/NeutraTextBookAlt.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/NeutraTextBookAlt.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/NeutraTextBookAlt.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+/* =============
+  Box fix
+============= */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* =============  
+  Clear fix  
+============= */
+.clear:before,
+.clear:after {
+  content: "";
+  display: table;
+}
+.clear:after {
+  clear: both;
+}
+.clear {
+  *zoom: 1;
+}
+
+.spacer {
+  padding-top: 100%; /* forces 1:1 aspect ratio */
+}
+
+.responsive_container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  text-align: center; /* Align center inline elements */
+  font: 0/0 a;
+}
+
+.responsive_container:before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.responsive_content {
+  vertical-align: middle;
+  display: inline-block;
+  width: 100%;
+  font-size: 18px;
+  font-family: 'Neutra Light';  
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: 'Neutra Light';
+  color: white;
+  background-color: black;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.accent_color {
+  color: rgb(252, 188, 248);
+}
+
+/* ============
+  Basic Grid
+============= */
+.controls {
+  float: right;
+  width: 15%;
+  height: 100%;
+}
+
+.container {
+  width: 85%;
+  float: right;
+  height: 100%;
+  background: black url('../../img/home_background_c.jpg') no-repeat;
+  background-size: cover;
+  background-position: 100% 0;
+  position: relative;
+}
+
+.spotlight_overlay {
+  width: 100%;
+  height: 100%;
+  background: transparent url('../../img/spot.png') no-repeat;
+  background-size: cover;
+  background-position: 100% 0;
+}
+
+footer {
+  width: 18%;
+  height: 4%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+footer small {
+  margin: auto 1rem;
+}
+
+footer a {
+  padding: .5rem;
+}
+
+nav {
+  position: relative;
+  width: 100%;
+  height: 80%;
+}
+
+nav ul {
+  padding-left: 25%;
+  text-align: left;
+}
+
+nav li {
+  line-height: 6rem;
+  font-size: 3rem;
+  text-align: left;
+}
+
+nav a:hover {
+  color: rgb(252, 188, 248);
+}
+
+.content {
+  width: 96%;
+  margin-right: 3.84%;
+  height: 100%;
+}
+
+header {
+  height: 16%;
+}
+
+.logo {
+  width: 120%;
+  position: relative;
+  padding: 4rem 5rem 0 0;
+  left: -2rem;
+  overflow: visible;
+  z-index: 999;
+}
+
+.logo h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.logo h2 {
+  font-size: 2.25rem;
+}
+
+
+
+
+.btn {
+  display: inline-block;
+  background-color: rgba(255, 225, 255, .85);
+  padding: 2rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  margin: 0 auto;
+  color: black;
+  font-family: 'Neutra Medium';
+  margin-bottom: 3rem;
+}
+
+.content_container {
+  background-color: rgba(0, 0, 0, .7);
+  display: inline-block;
+  margin: 2rem auto;
+  padding: 3rem;
+  width: 60%;
+  border-radius: 1rem;
+  /*border: 2px solid rgba(0, 0, 0, .8);
+  */
+  box-shadow: .35rem .35rem .5rem .5rem rgba(0, 0, 0, .6);
+}
+
+.login {
+  width: 100%;
+  margin: 0 auto;
+  color: black;
+  text-align: center;
+  display: inline-block;
+}
+
+.login input {
+  background-color: rgba(255, 225, 255, .85);
+  display: inline-block;
+  border: 1px solid rgb(255, 225, 255);
+  width: 100%;
+  font-size: 2rem;
+  margin-top: 1.25rem;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+}
+
+.login fieldset {
+  font-size: 2.5rem;
+  color: white;
+  padding-bottom: .5rem;
+}
+
+::-webkit-input-placeholder {
+  color: black;
+}
+:-moz-placeholder {
+  color: black;
+}
+::-moz-placeholder {
+  color: black;
+}
+:-ms-input-placeholder {
+  color: black;
+}
+
+p {
+  font-size: 2rem;
+  display: inline;
+  line-height: 2rem;
+}
