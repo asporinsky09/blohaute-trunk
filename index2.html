@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 
-
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="css/styles.css">
-		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-	
-		<title>Blohaute - Be Gorgeuos</title>
+		<link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/base/style.css">
 	</head>
 	<body>
-		<header>
-			Blohaute
-		</header>
-		<section class="content-container">
-			<div class="vertical-align-wrapper"><!--
-				--><section class="content vertical-center">
-					Blohaute is Chicago's first on demand mobile salon.  Send a Blohaute professional stylist to your door for only $50
+		<section class="controls">
+			<header>
+				<img src="img/bh_logo_main.png" class="logo">
+			</header>
+			<nav>
+				<div class="spacer"></div>
+				<div class="responsive_container">
+					<ul class="responsive_content">
+						<li><a href="styles.html">styles</a></li>
+						<li><a href="#">events</a></li>
+						<li><a href="#">schedule</a></li>
+						<li><a href="#">social</a></li>
+					</ul>
+				</div>
+			</nav>
+		</section>	
+		<div class="container">
+			<div class="spotlight_overlay">
+				<section class="content responsive_container">
+					<!-- TODO: Need a container spacer but inline-block spacing bug pushes it down fix later-->
+					<div class="responsive_content">
+						<section class="content_container content_small">
+							<a href="#" class="btn">book a stylist now</a>
+							<form action="#" method="post" class="login">
+								<fieldset>member login</fieldset>
+								<input type="email" placeholder="email address:">
+								<input type="password" placeholder="password:">
+							</form>
+						</section>
+						<section class="content_container content_small">
+							<p>Blohaute is Chicago's first on demand salon for blow dry and styling services. Send a professional stylist to your door for only $50.</p>
+						</section>
+					</div>
 				</section>
 			</div>
-		</section>
-		<nav>
-			<div class="vertical-align-wrapper"><!--
-			 --><ul class="vertical-center">
-					<a href="styles.html"><li class="vertical-align-wrapper"><!-- --><span class="vertical-bottom">styles</li></a>
-					<a href="events.html"><li class="vertical-align-wrapper"><!-- --><span class="vertical-bottom">events</li></a>
-					<a href="book.html"><li class="vertical-align-wrapper"><!-- --><span class="vertical-bottom">schedule</li></a>
-					<a href="social.html"><li class="vertical-align-wrapper"><!-- --><span class="vertical-bottom">social</li></a>
-				</ul>
-			</div>
-		</nav>
-		<footer>
-			<div class="vertical-align-wrapper">
-				<small class="vertical-center" id="copyright">&copy;Blohaute - 2014</small>
-				<section id="social-icons" class="vertical-top">
-					<a href="http://www.instagram.com/blohaute" target="_blank"><span class="fa fa-instagram fa-lg"></span></a>
-					<a href="http://www.pinterest.com/blohaute" target="_blank"><span class="fa fa-pinterest fa-lg"></span></a>
-					<a href="http://www.twitter.com/blohaute" target="_blank"><span class="fa fa-twitter fa-lg"></span></a>
-					<a href="http://www.facebook.com/blohaute" target="_blank"><span class="fa fa-facebook fa-lg"></span></a>
-				</section>
-			</div>
+		</div>
+		<footer>	
+			<a href="http://www.instagram.com/blohaute" target="_blank"><span class="fa fa-instagram fa-lg"></span></a>
+			<a href="http://www.pinterest.com/blohaute" target="_blank"><span class="fa fa-pinterest fa-lg"></span></a>
+			<a href="http://www.twitter.com/blohaute" target="_blank"><span class="fa fa-twitter fa-lg"></span></a>
+			<a href="http://www.facebook.com/blohaute" target="_blank"><span class="fa fa-facebook fa-lg"></span></a>
+			<small>&copy;blohaute - 2014</small>
 		</footer>
 	</body>
 </html>
