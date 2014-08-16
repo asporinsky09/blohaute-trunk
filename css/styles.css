@@ -1,0 +1,208 @@
+@import url("base/reset.css");
+
+/* =============
+  Box fix
+============= */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* =============  
+  Clear fix  
+============= */
+.clear:before,
+.clear:after {
+  content: "";
+  display: table;
+}
+.clear:after {
+  clear: both;
+}
+.clear {
+  *zoom: 1;
+}
+
+/* =============
+	Vertical Centering
+============= */
+.vertical-align-wrapper {
+	height: 100%;
+}
+
+.vertical-align-wrapper:before,
+.vertical-center,
+.vertical-bottom,
+.vertical-top {
+	display: inline-block;
+}
+
+.vertical-align-wrapper:before,
+.vertical-center {
+	vertical-align: middle;
+}
+
+.vertical-bottom {
+	vertical-align: bottom;
+}
+
+.vertical-top {
+	vertical-align: top;
+}
+
+.vertical-align-wrapper:before {
+	content: '';
+	display: inline-block;
+	width: 0;
+	height: 100%;
+	vertical-align: middle;
+}
+
+/* =============
+	Utility
+============= */
+.fill {
+	width: 100%;
+}
+
+/* =============
+	Basics
+============= */
+html {
+	height: 100%;
+}
+
+body {
+	background-color: black;
+	color: white;
+	height: 100%;
+	font-family: 'Droid Sans';
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+/* =============
+	Mobile Layout
+============= */
+@media screen and (max-width: 600px) {
+	header {
+		display: block;
+		height: 10%;
+		font-size: 200%;
+	}
+
+	.content-container {
+		width: 100%;
+		display: block;
+		float: none;
+		height: 80%;
+		text-align: center;
+	}
+
+	nav {
+		display: block;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		height: 10%;
+		width: 100%;
+	}
+
+	footer {
+		height: 10%;
+		display: inline-block;
+		position: fixed;
+		top: 0;
+		right: 0;
+	}
+
+	#copyright {
+		display: none;
+	}
+
+	/* =============
+		Styling
+	============= */
+	#social-icons span {
+		padding: .5rem;
+	}
+
+	nav {
+		border-top: 1px solid white;
+	}
+
+	nav ul {
+		height: 100%;
+		width: 100%;
+	}
+
+	nav li {
+		float: left;
+		height: 100%;
+		width: 25%;
+		text-align: center;
+		border-right: 1px solid white;
+	}
+
+	/* TODO Figure out the issue with the first/last-child removing all borders */
+}
+
+/* ==============
+		Main Layout 
+============== */
+@media screen and (min-width: 601px) {
+	header {
+		position: absolute;
+		right: 4%;
+		top: 4%;
+		font-size: 200%;
+	}
+
+	.content-container {
+		width: 80%;
+		float: left;
+		height: 100%;
+	}
+
+	nav {
+		width: 20%;
+		height: 100%;
+		float: left;
+	}
+
+	footer {
+		position: absolute;
+		right: 0;
+		left: 0;
+		bottom: 0;
+	}
+
+	#social-icons,
+	footer small {
+		float: right;
+		padding: 1rem 1rem .25rem 1rem;
+	}
+
+	#social-icons span {
+		padding-left: .5rem;
+	}
+
+	/* =============
+		Layout styling
+	============= */
+	#social-icons span:hover {
+		color: pink;
+	}
+
+	nav li {
+		height: 25%;
+	}
+}
+	
